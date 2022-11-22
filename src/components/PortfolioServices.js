@@ -1,4 +1,4 @@
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import analyticalLogo from '../assets/analytical.jpg';
 

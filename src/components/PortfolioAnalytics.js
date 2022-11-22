@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import portfolioAnalytics from '../assets/analytics.jpg';
 
 const PortfolioAnalytics = () => {

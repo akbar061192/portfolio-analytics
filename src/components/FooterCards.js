@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import investmentBanking from '../assets/investment-banking.png';
 import dashboard from '../assets/dashboard.png';
 import tech from '../assets/tech.png';
