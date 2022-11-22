@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import { CssBaseline } from '@mui/material';
 import './App.css';
+import FooterCards from './components/FooterCards';
+import NavBar from './components/NavBar';
+import PortfolioAnalytics from './components/PortfolioAnalytics';
+import PortfolioServices from './components/PortfolioServices';
+import RequestDemo from './components/RequestDemo';
+import TradeMarkFooter from './components/TradeMarkFooter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <NavBar />
+      <PortfolioServices />
+      <PortfolioAnalytics />
+      <RequestDemo />
+      <FooterCards />
+      <TradeMarkFooter />
+    </>
   );
 }
 
