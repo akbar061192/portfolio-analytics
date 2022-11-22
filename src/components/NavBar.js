@@ -46,7 +46,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            <img src={logo} alt='logo' width={200} />
+            <img src={logo} alt='logo' width={290} />
           </Typography>
           <div style={{ flex: 1 }}></div>
           <Box style={{ display: 'flex', justifyContent: 'space-evenly' }} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
