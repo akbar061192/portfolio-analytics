@@ -31,7 +31,7 @@ const FooterCard = props => {
 const FooterCards = () => {
   return (
     <>
-      <div style={{ background: 'black', color: 'whitesmoke' }}>
+      <div style={{ background: '#333', color: 'whitesmoke' }}>
         <section
           style={{
             display: 'flex',

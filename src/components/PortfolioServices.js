@@ -1,8 +1,11 @@
 import { Button, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import analyticalLogo from '../assets/analytical.jpg';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 const PortfolioServices = () => {
+  const [mouserHover, setMouseHover] = useState(false);
+
   return (
     <>
       <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}>
@@ -20,6 +23,13 @@ const PortfolioServices = () => {
             className='begin-now'
             style={{ background: '#0b4399', color: 'white', fontSize: '1.2rem', padding: '5px 15px' }}
             variant='contained'
+            endIcon={<ArrowCircleRightOutlinedIcon style={{ fontSize: `${mouserHover ? '2.2rem' : '1.8rem'}` }} />}
+            onMouseOver={() => {
+              setMouseHover(true);
+            }}
+            onMouseOut={() => {
+              setMouseHover(false);
+            }}
           >
             BEGIN NOW
           </Button>

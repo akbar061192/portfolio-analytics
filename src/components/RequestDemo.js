@@ -20,7 +20,7 @@ const RequestDemo = () => {
             paddingTop: '3rem',
           }}
         >
-          Portfolio Analytics platform for the Tech Savy Advisors, &amp; Family Offices
+          Portfolio Analytics platform for the Tech Savy Advisors &amp; Family Offices
         </Typography>
         <main style={{ textAlign: 'center' }}>
           <Typography marginBottom={'1rem'} style={{ fontSize: '1.4rem', fontWeight: '600', fontFamily: 'Source Sans Pro' }}>
