@@ -1,17 +1,17 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import portfolioAnalytics from '../assets/analytics.jpg';
+import portfolioAnalytics from '../assets/analytics.png';
 
 const PortfolioAnalytics = () => {
   return (
     <>
-      <div className='container'>
+      <div>
         <section
           style={{
             display: 'flex',
             justifyContent: 'space-between',
             padding: '6rem 6rem 5rem 6rem',
-            marginTop: '6rem',
+            // marginTop: '6rem',
           }}
         >
           <img src={portfolioAnalytics} alt='analyticalLogo' width={700} style={{ borderRadius: '4%' }} />
@@ -23,6 +23,7 @@ const PortfolioAnalytics = () => {
             <Typography
               marginBottom={'1rem'}
               style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
+              color='gray'
             >
               With FYINNOVEA portfolio management web platform &amp; mobile apps, monitor your investments easily from anywhere and at any
               time.
@@ -30,6 +31,7 @@ const PortfolioAnalytics = () => {
             <Typography
               marginBottom={'1rem'}
               style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
+              color='gray'
             >
               As the market changes, you may need to make changes in your investment goals, allocation, diversification / concentration
               &amp; timely monitoring your investments using high benchmarks &amp; decision based on data analytics

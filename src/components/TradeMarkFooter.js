@@ -5,7 +5,7 @@ const TradeMarkFooter = () => {
   return (
     <div style={{ margin: '4rem  6rem 2rem   6rem' }}>
       <hr style={{ marginBottom: '2rem' }} />
-      <Typography>FYINNOVEA Private Limited © 2022</Typography>
+      <Typography color='gray'> Copyright © 2022 FYINNOVEA</Typography>
     </div>
   );
 };

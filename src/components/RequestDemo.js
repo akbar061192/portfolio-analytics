@@ -26,10 +26,11 @@ const RequestDemo = () => {
           <Typography marginBottom={'1rem'} style={{ fontSize: '1.4rem', fontWeight: '600', fontFamily: 'Source Sans Pro' }}>
             Request a Demo
           </Typography>
-          <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly', height: '500px' }}>
-            <TextField style={{ width: '25rem' }} id='outlined-basic1' label='Your Name' variant='outlined' />
-            <TextField style={{ width: '25rem' }} id='outlined-basic2' label='Email' variant='outlined' />
+          <form style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly', height: '530px' }}>
+            <TextField style={{ width: '25rem' }} id='outlined-basic1' label='Your Name' variant='outlined' required />
+            <TextField style={{ width: '25rem' }} id='outlined-basic2' label='Email' variant='outlined' required />
             <TextField style={{ width: '25rem' }} id='outlined-basic3' label='Website' variant='outlined' />
+            <TextField type={'number'} style={{ width: '25rem' }} id='outlined-basic4' label='Mobile Number' variant='outlined' required />
             <FormControl style={{ width: '25rem' }}>
               <FormLabel style={{ width: '25rem', textAlign: 'left' }} id='demo-radio-buttons-group-label'>
                 You are an..

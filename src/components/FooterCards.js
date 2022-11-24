@@ -9,7 +9,7 @@ const FooterCard = props => {
   return (
     <div
       style={{
-        border: '1px solid white',
+        border: '1px solid black',
         borderRadius: '10px',
         width: '430px',
         display: 'flex',
@@ -22,8 +22,10 @@ const FooterCard = props => {
       }}
     >
       <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem ' }}>{title}</Typography>
-      <img src={img} alt={title} width={40} style={{ background: 'white', borderRadius: '5px' }} />
-      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1.2rem ' }}>{desc}</Typography>
+      <img src={img} alt={title} width={40} style={{ borderRadius: '5px' }} />
+      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1.2rem ' }} color='gray'>
+        {desc}
+      </Typography>
     </div>
   );
 };
@@ -31,7 +33,7 @@ const FooterCard = props => {
 const FooterCards = () => {
   return (
     <>
-      <div style={{ background: '#333', color: 'whitesmoke' }}>
+      <div>
         <section
           style={{
             display: 'flex',

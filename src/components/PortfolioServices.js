@@ -11,7 +11,7 @@ const PortfolioServices = () => {
       <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}>
         <main>
           <Typography marginBottom={'1.2rem'} style={{ fontSize: '4rem', fontWeight: '500', color: '#282828', fontFamily: 'Poppins' }}>
-            PORTFOLIO SERVICES
+            PORTFOLIO ANALYTICS
           </Typography>
           <Typography
             marginBottom={'1rem'}
@@ -35,7 +35,7 @@ const PortfolioServices = () => {
           </Button>
         </main>
 
-        <img src={analyticalLogo} alt='analyticalLogo' />
+        <img src={analyticalLogo} alt='analyticalLogo' width={700} style={{ marginRight: '4rem' }} />
       </section>
     </>
   );

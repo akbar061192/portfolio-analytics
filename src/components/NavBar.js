@@ -48,14 +48,14 @@ const ResponsiveAppBar = () => {
           >
             <img src={logo} alt='logo' width={290} />
           </Typography>
-          <div style={{ flex: 1 }}></div>
+          {/* <div style={{ flex: 1 }}></div> */}
           <Box style={{ display: 'flex', justifyContent: 'space-evenly' }} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map(page => (
               <Button style={{ color: '#0b4399' }} key={page} sx={{ my: 2, color: 'white', display: 'block' }}>
                 {page}
               </Button>
             ))}
-            <Button style={{ color: '#f39305', borderRadius: 0 }} sx={{ my: 2, color: 'white', display: 'block' }} variant='outlined'>
+            <Button style={{ color: '#f39305', borderRadius: 0 }} sx={{ my: 2, color: 'white', display: 'block' }}>
               Connect Us
             </Button>
           </Box>
