@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 import portfolioAnalytics from '../assets/analytics.png';
-import circleIcon from '../assets/circle-icon.png';
 import TripOriginRoundedIcon from '@mui/icons-material/TripOriginRounded';
 
 const PortfolioAnalytics = () => {
