@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro&display=swap');
 
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .begin-now:hover{
   color: white !important;
   background-color:#f39305 !important;
 }
+
+
 
 .container {
   background: linear-gradient(90.21deg, #b54f8c -5.91%, #725bd5 111.58%);

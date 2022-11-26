@@ -39,7 +39,7 @@ const FooterCards = () => {
             display: 'flex',
             justifyContent: 'space-between',
             padding: '6rem 6rem 5rem 6rem',
-            marginTop: '6rem',
+            // marginTop: '6rem',
           }}
         >
           <main style={{ marginLeft: '2rem' }}>

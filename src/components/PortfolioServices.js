@@ -8,22 +8,40 @@ const PortfolioServices = () => {
 
   return (
     <>
-      <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}>
-        <main>
-          <Typography marginBottom={'1.2rem'} style={{ fontSize: '4rem', fontWeight: '500', color: '#282828', fontFamily: 'Poppins' }}>
+      {/* <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}> */}
+      <section style={{ marginTop: '16rem', display: 'grid', gridTemplateColumns: '2fr 1fr', marginBottom: '6rem' }}>
+        <main style={{ justifySelf: 'center' }}>
+          <Typography
+            style={{
+              fontSize: '4.8rem',
+              fontWeight: '500',
+              fontFamily: 'Poppins',
+              background:
+                '-webkit-linear-gradient(66.29deg, #0b4399 0%, #1D0499 9.03%, #100BC5 26.1%, #0710E4 42.16%, #0213F8 55.2%, #0015FF 64.24%, #003EFF 72.27%, #007DFF 85.31%, #007DFF 94.35%, #007DFF 99.37%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}
+          >
             PORTFOLIO ANALYTICS
           </Typography>
           <Typography
-            marginBottom={'1rem'}
+            marginBottom={'3rem'}
             style={{ color: '#0b4399', fontSize: '1.2rem', fontWeight: '600', fontFamily: 'Source Sans Pro' }}
           >
             Platform by <span style={{ fontSize: '1.25rem', fontStyle: 'italic', color: '#f39305' }}>FYINNOVEA</span>
           </Typography>
           <Button
             className='begin-now'
-            style={{ background: '#0b4399', color: 'white', fontSize: '1.2rem', padding: '5px 15px' }}
+            style={{
+              width: '30%',
+              background: '#e5004c',
+              color: 'white',
+              fontSize: '1.2rem',
+              padding: '15px 20px',
+              borderRadius: '20px',
+            }}
             variant='contained'
-            endIcon={<ArrowCircleRightOutlinedIcon style={{ fontSize: `${mouserHover ? '2.2rem' : '1.8rem'}` }} />}
+            endIcon={<ArrowCircleRightOutlinedIcon style={{ fontSize: '1.7rem' }} />}
             onMouseOver={() => {
               setMouseHover(true);
             }}
@@ -35,7 +53,7 @@ const PortfolioServices = () => {
           </Button>
         </main>
 
-        <img src={analyticalLogo} alt='analyticalLogo' width={700} style={{ marginRight: '4rem' }} />
+        <img src={analyticalLogo} alt='analyticalLogo' width={560} style={{ marginRight: '4rem' }} />
       </section>
     </>
   );

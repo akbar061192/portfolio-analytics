@@ -12,8 +12,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const ResponsiveAppBar = () => {
-  // const [activeLink, setActiveLink] = useState('');
+const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const pages = ['What We Do', 'Solutions', 'Marketplace', 'Partner with Us', 'Connect Us'];
 
@@ -44,7 +43,7 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar elevation={scrolled ? 3 : 0} style={{ position: 'fixed', top: 0, background: 'white' }}>
       <Container maxWidth='xl'>
-        <Toolbar disableGutters>
+        <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '35px'}` }}>
           <Typography
             variant='h6'
             noWrap
@@ -116,14 +115,19 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            <img src={logo} alt='logo' width={350} />
+            <img src={logo} alt='logo' width={`${scrolled ? 300 : 350}`} />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'space-evenly' } }}>
             {pages.map(page => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} `, display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} `,
+                  display: 'block',
+                  fontSize: `${scrolled ? '15px' : '1rem'}`,
+                }}
               >
                 {page}
               </Button>
@@ -134,4 +138,4 @@ const ResponsiveAppBar = () => {
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
+export default NavBar;
