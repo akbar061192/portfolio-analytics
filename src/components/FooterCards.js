@@ -11,7 +11,7 @@ const FooterCard = props => {
       style={{
         border: '1px solid black',
         borderRadius: '10px',
-        width: '430px',
+        width: '380px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -21,9 +21,9 @@ const FooterCard = props => {
         margin: '1rem',
       }}
     >
-      <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem ' }}>{title}</Typography>
+      <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem', textAlign: 'center' }}>{title}</Typography>
       <img src={img} alt={title} width={40} style={{ borderRadius: '5px' }} />
-      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1.2rem ' }} color='gray'>
+      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1rem ' }} color='gray'>
         {desc}
       </Typography>
     </div>
@@ -36,17 +36,17 @@ const FooterCards = () => {
       <div>
         <section
           style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            padding: '6rem 6rem 5rem 6rem',
-            // marginTop: '6rem',
+            marginTop: '3rem',
           }}
         >
-          <main style={{ marginLeft: '2rem' }}>
-            <Typography marginBottom={'1.2rem'} style={{ fontSize: '2.5rem', fontWeight: '500', fontFamily: 'Poppins' }}>
+          <main>
+            <Typography
+              marginBottom={'1.2rem'}
+              style={{ fontSize: '2rem', fontWeight: '500', fontFamily: 'Poppins', marginLeft: '3.5rem' }}
+            >
               Why We..
             </Typography>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
               <FooterCard
                 title='Streamlined Portfolio Analysis'
                 img={investmentBanking}
