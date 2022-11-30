@@ -43,7 +43,7 @@ const NavBar = () => {
   return (
     <AppBar elevation={scrolled ? 3 : 0} style={{ position: 'fixed', top: 0, background: 'white' }}>
       <Container maxWidth='xl'>
-        <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '35px'}` }}>
+        <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '18px'}` }}>
           <Typography
             variant='h6'
             noWrap
@@ -59,7 +59,7 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            <img src={logo} alt='logo' width={350} />
+            <img src={logo} alt='logo' width={300} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -126,7 +126,7 @@ const NavBar = () => {
                   my: 2,
                   color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} `,
                   display: 'block',
-                  fontSize: `${scrolled ? '15px' : '1rem'}`,
+                  fontSize: `${scrolled ? '13px' : '14px'}`,
                 }}
               >
                 {page}

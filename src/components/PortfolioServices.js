@@ -7,11 +7,11 @@ const PortfolioServices = () => {
   return (
     <>
       {/* <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}> */}
-      <section style={{ marginTop: '16rem', display: 'grid', gridTemplateColumns: '2fr 1fr', marginBottom: '6rem' }}>
+      <section style={{ marginTop: '10rem', display: 'flex', justifyContent: 'space-evenly' }}>
         <main style={{ justifySelf: 'center' }}>
           <Typography
             style={{
-              fontSize: '4.8rem',
+              fontSize: '4rem',
               fontWeight: '500',
               fontFamily: 'Poppins',
               background:
@@ -45,7 +45,7 @@ const PortfolioServices = () => {
           </Button>
         </main>
 
-        <img src={analyticalLogo} alt='analyticalLogo' width={560} style={{ marginRight: '4rem' }} />
+        <img src={analyticalLogo} alt='analyticalLogo' width={500} />
       </section>
     </>
   );
