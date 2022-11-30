@@ -6,12 +6,11 @@ import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOu
 const PortfolioServices = () => {
   return (
     <>
-      {/* <section style={{ display: 'flex', marginTop: '12rem', marginLeft: '6rem', justifyContent: 'space-between' }}> */}
-      <section style={{ marginTop: '10rem', display: 'flex', justifyContent: 'space-evenly' }}>
-        <main style={{ justifySelf: 'center' }}>
+      <section style={{ marginTop: '12rem', display: 'flex', justifyContent: 'space-around' }}>
+        <main>
           <Typography
             style={{
-              fontSize: '4rem',
+              fontSize: '4.2rem',
               fontWeight: '500',
               fontFamily: 'Poppins',
               background:
@@ -23,7 +22,7 @@ const PortfolioServices = () => {
             PORTFOLIO ANALYTICS
           </Typography>
           <Typography
-            marginBottom={'3rem'}
+            marginBottom={'2rem'}
             style={{ color: '#0b4399', fontSize: '1.2rem', fontWeight: '600', fontFamily: 'Source Sans Pro' }}
           >
             Platform by <span style={{ fontSize: '1.25rem', fontStyle: 'italic', color: '#f39305' }}>FYINNOVEA</span>
@@ -31,11 +30,9 @@ const PortfolioServices = () => {
           <Button
             className='begin-now'
             style={{
-              width: '30%',
               background: '#e5004c',
               color: 'white',
               fontSize: '1.2rem',
-              padding: '15px 20px',
               borderRadius: '20px',
             }}
             variant='contained'
@@ -45,7 +42,7 @@ const PortfolioServices = () => {
           </Button>
         </main>
 
-        <img src={analyticalLogo} alt='analyticalLogo' width={500} />
+        <img src={analyticalLogo} alt='analyticalLogo' width={450} />
       </section>
     </>
   );

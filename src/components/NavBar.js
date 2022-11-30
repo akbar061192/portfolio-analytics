@@ -43,7 +43,7 @@ const NavBar = () => {
   return (
     <AppBar elevation={scrolled ? 3 : 0} style={{ position: 'fixed', top: 0, background: 'white' }}>
       <Container maxWidth='xl'>
-        <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '18px'}` }}>
+        <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '20px'}` }}>
           <Typography
             variant='h6'
             noWrap
