@@ -1,6 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Typography } from '@mui/material';
-import investWisely from '../assets/investWisely.png';
+import investmentBanking from '../assets/analytics_01.jpg';
+import dashboard from '../assets/analytics_02.jpg';
+import tech from '../assets/analytics_03.png';
+
+const bgImages = [tech, dashboard, investmentBanking];
+const delay = 2500;
 
 const PortfolioAnalytics = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +24,24 @@ const PortfolioAnalytics = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const [index, setIndex] = useState(0);
+  const timeoutRef = useRef(null);
+
+  function resetTimeout() {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(() => setIndex(prevIndex => (prevIndex === bgImages.length - 1 ? 0 : prevIndex + 1)), delay);
+
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+
   return (
     <>
       <section
@@ -26,14 +49,30 @@ const PortfolioAnalytics = () => {
           display: 'flex',
           justifyContent: 'space-evenly',
           padding: '2rem',
-          border: '1px solid transparent',
           margin: ` ${scrolled ? '6rem' : '12rem'}  2rem 3rem 2rem`,
-          borderRadius: '20px',
-          background: '#5bccf6',
         }}
       >
-        <img src={investWisely} alt='analyticalLogo' width={600} style={{ borderRadius: '10px' }} />
+        <div className='slideshow'>
+          <div className='slideshowSlider' style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+            {bgImages.map((bgImage, index) => (
+              <img src={bgImage} className='slide' key={index} alt={bgImage} />
+            ))}
+          </div>
 
+          <div className='slideshowDots'>
+            {bgImages.map((_, idx) => (
+              <div
+                key={idx}
+                className={`slideshowDot${index === idx ? ' active' : ''}`}
+                onClick={() => {
+                  setIndex(idx);
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        {/*  */}
         <main style={{ marginLeft: '5rem' }}>
           <Typography
             marginBottom={'1.5rem'}
