@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
-import portfolioAnalytics from '../assets/portfolio_analytics.jpg';
-import TripOriginRoundedIcon from '@mui/icons-material/TripOriginRounded';
+import investWisely from '../assets/investWisely.png';
 
 const PortfolioAnalytics = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
       <section
@@ -12,12 +27,12 @@ const PortfolioAnalytics = () => {
           justifyContent: 'space-evenly',
           padding: '2rem',
           border: '1px solid transparent',
-          margin: '10rem 2rem 3rem 2rem',
+          margin: ` ${scrolled ? '6rem' : '12rem'}  2rem 3rem 2rem`,
           borderRadius: '20px',
-          background: 'whitesmoke',
+          background: '#5bccf6',
         }}
       >
-        <img src={portfolioAnalytics} alt='analyticalLogo' width={600} style={{ borderRadius: '10px' }} />
+        <img src={investWisely} alt='analyticalLogo' width={600} style={{ borderRadius: '10px' }} />
 
         <main style={{ marginLeft: '5rem' }}>
           <Typography
@@ -27,8 +42,6 @@ const PortfolioAnalytics = () => {
             Invest Wisely
           </Typography>
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <TripOriginRoundedIcon style={{ width: '20px', marginTop: '5px', marginRight: '10px', color: '#1d12cc' }} />
-
             <Typography
               marginBottom={'1rem'}
               style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
@@ -40,7 +53,6 @@ const PortfolioAnalytics = () => {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <TripOriginRoundedIcon style={{ width: '20px', marginTop: '5px', marginRight: '10px', color: '#1d12cc' }} />
             <Typography
               marginBottom={'1rem'}
               style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}

@@ -23,9 +23,7 @@ const FooterCard = props => {
     >
       <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem', textAlign: 'center' }}>{title}</Typography>
       <img src={img} alt={title} width={40} style={{ borderRadius: '5px' }} />
-      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1rem ' }} color='gray'>
-        {desc}
-      </Typography>
+      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1rem ' }}>{desc}</Typography>
     </div>
   );
 };
