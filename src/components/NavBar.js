@@ -126,7 +126,7 @@ const NavBar = () => {
                   my: 2,
                   color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} `,
                   display: 'block',
-                  fontSize: `${scrolled ? '13px' : '14px'}`,
+                  fontSize: `${scrolled ? '1rem' : '0.9rem'}`,
                 }}
               >
                 {page}

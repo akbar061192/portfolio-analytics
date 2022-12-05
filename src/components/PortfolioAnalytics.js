@@ -49,7 +49,7 @@ const PortfolioAnalytics = () => {
           display: 'flex',
           justifyContent: 'space-evenly',
           padding: '2rem',
-          margin: ` ${scrolled ? '6rem' : '12rem'}  2rem 3rem 2rem`,
+          margin: ` ${scrolled ? '4rem' : '12rem'}  2rem 0rem 2rem`,
         }}
       >
         <div className='slideshow'>
@@ -73,18 +73,17 @@ const PortfolioAnalytics = () => {
         </div>
 
         {/*  */}
-        <main style={{ marginLeft: '5rem' }}>
+        <main style={{ marginLeft: '3rem' }}>
           <Typography
-            marginBottom={'1.5rem'}
-            style={{ fontSize: '2rem', fontWeight: 'bold', fontFamily: 'Poppins', lineHeight: '48px', color: '#0015FF' }}
+            marginBottom={'0.7rem'}
+            style={{ fontSize: '1.7rem', fontWeight: 'bold', fontFamily: 'Poppins', lineHeight: '48px', color: '#0015FF' }}
           >
             Invest Wisely
           </Typography>
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Typography
               marginBottom={'1rem'}
-              style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
-              // color='gray'
+              style={{ fontSize: '1.1rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
             >
               With FYINNOVEA portfolio management web platform &amp; mobile apps, monitor your investments easily from anywhere and at any
               time.
@@ -94,11 +93,24 @@ const PortfolioAnalytics = () => {
           <div style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Typography
               marginBottom={'1rem'}
-              style={{ fontSize: '1.2rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
-              // color='gray'
+              style={{ fontSize: '1.1rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}
             >
-              As the market changes, you may need to make changes in your investment goals, allocation, diversification / concentration
-              &amp; timely monitoring your investments using high benchmarks &amp; decision based on data analytics
+              As the market changes, you may need to make changes in your investment goals, allocation, diversification/concentration &amp;
+              timely monitoring your investments using high benchmarks &amp; decision based on data analytics
+            </Typography>
+          </div>
+
+          <Typography
+            marginBottom={'0.7rem'}
+            style={{ fontSize: '1.7rem', fontWeight: 'bold', fontFamily: 'Poppins', lineHeight: '48px', color: '#0015FF' }}
+          >
+            Research before you invest
+          </Typography>
+          <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Typography style={{ fontSize: '1.1rem', fontWeight: '400', fontFamily: 'Source Sans Pro', textAlign: 'justify' }}>
+              FYINNOVEA Portfolio Analytics platform processes large sets of data, generated via multiple data streams from a wide variety
+              of sources on a constant basis almost every day to identify market trends, forecast risks, analyze sentiments in social media
+              and prevent potential investment fraud resulting in enormous wealth
             </Typography>
           </div>
         </main>

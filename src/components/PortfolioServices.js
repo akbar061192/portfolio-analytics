@@ -1,9 +1,11 @@
 import { Button, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import analyticalLogo from '../assets/analytical.jpg';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 const PortfolioServices = () => {
+  const [overBtn, setOverBtn] = useState(false);
+
   return (
     <>
       <section style={{ marginTop: '12rem', display: 'flex', justifyContent: 'space-around' }}>
@@ -29,20 +31,31 @@ const PortfolioServices = () => {
           </Typography>
           <Button
             className='begin-now'
+            onMouseOver={() => {
+              setOverBtn(true);
+              console.log('over...');
+            }}
+            onMouseOut={() => {
+              setOverBtn(false);
+
+              console.log('out...');
+            }}
             style={{
               background: '#e5004c',
               color: 'white',
               fontSize: '1.2rem',
               borderRadius: '20px',
+              marginTop: '2.5rem',
+              width: `${overBtn ? '190px' : '175px'}`,
             }}
             variant='contained'
-            endIcon={<ArrowCircleRightOutlinedIcon style={{ fontSize: '1.7rem' }} />}
+            endIcon={<ArrowCircleRightOutlinedIcon style={{ fontSize: `${overBtn ? '2rem' : '1.7rem'}` }} />}
           >
             BEGIN NOW
           </Button>
         </main>
 
-        <img src={analyticalLogo} alt='analyticalLogo' width={450} />
+        <img src={analyticalLogo} alt='analyticalLogo' width={465} />
       </section>
     </>
   );
