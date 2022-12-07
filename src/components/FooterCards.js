@@ -9,6 +9,7 @@ const FooterCard = props => {
   return (
     <div
       style={{
+        background: 'linear-gradient(150deg, #E3E3E3, #8c939b 100%)',
         border: '1px solid black',
         borderRadius: '10px',
         width: '380px',
@@ -19,6 +20,7 @@ const FooterCard = props => {
         height: '280px',
         padding: '1rem',
         margin: '1rem',
+        fontWeight: 'bolder',
       }}
     >
       <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem', textAlign: 'center' }}>{title}</Typography>
