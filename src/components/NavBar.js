@@ -47,6 +47,7 @@ const NavBar = () => {
         position: 'fixed',
         top: 0,
         background: 'white',
+        opacity: '0.9',
       }}
     >
       <Container maxWidth='xl'>
