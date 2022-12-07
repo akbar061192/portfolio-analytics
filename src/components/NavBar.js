@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-removebg-preview.png';
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -41,7 +41,14 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar elevation={scrolled ? 3 : 0} style={{ position: 'fixed', top: 0, background: 'white' }}>
+    <AppBar
+      elevation={scrolled ? 3 : 0}
+      style={{
+        position: 'fixed',
+        top: 0,
+        background: 'white',
+      }}
+    >
       <Container maxWidth='xl'>
         <Toolbar disableGutters style={{ paddingTop: `${scrolled ? '' : '20px'}` }}>
           <Typography
