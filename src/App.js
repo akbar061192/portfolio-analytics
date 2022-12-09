@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import NewDemo from './components/NewDemo';
 import PortfolioAnalytics from './components/PortfolioAnalytics';
 import PortfolioServices from './components/PortfolioServices';
-import RequestDemo from './components/RequestDemo';
+// import RequestDemo from './components/RequestDemo';
 import TradeMarkFooter from './components/TradeMarkFooter';
 
 function App() {
