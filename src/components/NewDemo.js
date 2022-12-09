@@ -40,7 +40,9 @@ const Contact = () => {
     otherCategory: '',
   });
 
-  const handleSubmit = async e => {};
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
 
   const handleInputChange = event => {
     const name = event.target.name;
@@ -104,6 +106,7 @@ const Contact = () => {
                           >
                             <input
                               type='text'
+                              required
                               value={formDetails.firstName}
                               placeholder='Name*'
                               onChange={e =>
@@ -114,6 +117,7 @@ const Contact = () => {
                           <Col size={12} sm={6} className='px-1'>
                             <input
                               type='email'
+                              required
                               value={formDetails.lasttName}
                               placeholder='Email*'
                               onChange={e =>
@@ -141,6 +145,7 @@ const Contact = () => {
                           <Col size={12} sm={6} className='px-1'>
                             <input
                               type='number'
+                              required
                               value={formDetails.phone}
                               placeholder='Mobile No.'
                               onChange={e =>
@@ -164,30 +169,31 @@ const Contact = () => {
                             </FormLabel>
                             <RadioGroup
                               name='category'
+
                               // value={demoInput.category}
                               // onChange={handleInputChange}
                             >
                               <FormControlLabel
                                 value='investment_advisor'
-                                control={<Radio />}
+                                control={<Radio required />}
                                 label='Investment Advisor'
                                 style={{ color: 'white' }}
                               />
                               <FormControlLabel
                                 value='portfolio_manager'
-                                control={<Radio />}
+                                control={<Radio required />}
                                 label='Portfolio Manager'
                                 style={{ color: 'white' }}
                               />
                               <FormControlLabel
                                 value='family_office'
-                                control={<Radio />}
+                                control={<Radio required />}
                                 label='Family Office'
                                 style={{ color: 'white' }}
                               />
                               <FormControlLabel
                                 value='other'
-                                control={<Radio />}
+                                control={<Radio required />}
                                 label='Other'
                                 style={{ color: 'white' }}
                               />
