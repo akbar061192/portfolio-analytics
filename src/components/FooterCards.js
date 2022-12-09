@@ -25,9 +25,25 @@ const FooterCard = props => {
         opacity: '0.9',
       }}
     >
-      <Typography style={{ fontFamily: 'Poppins', fontSize: '1.5rem', textAlign: 'center' }}>{title}</Typography>
+      <Typography
+        style={{
+          fontFamily: 'Poppins',
+          fontSize: '1.5rem',
+          textAlign: 'center',
+        }}
+      >
+        {title}
+      </Typography>
       <img src={img} alt={title} width={40} style={{ borderRadius: '5px' }} />
-      <Typography style={{ textAlign: 'center', fontFamily: 'Source Sans Pro', fontSize: '1rem ' }}>{desc}</Typography>
+      <Typography
+        style={{
+          textAlign: 'center',
+          fontFamily: 'Source Sans Pro',
+          fontSize: '1rem ',
+        }}
+      >
+        {desc}
+      </Typography>
     </div>
   );
 };
@@ -44,11 +60,22 @@ const FooterCards = () => {
           <main>
             <Typography
               marginBottom={'1.2rem'}
-              style={{ fontSize: '2rem', fontWeight: '500', fontFamily: 'Poppins', marginLeft: '3.5rem' }}
+              style={{
+                fontSize: '2rem',
+                fontWeight: '500',
+                fontFamily: 'Poppins',
+                marginLeft: '6rem',
+              }}
             >
               Why We..
             </Typography>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}
+            >
               <FooterCard
                 bg='linear-gradient(150deg, #17ead9, #6078ea 100%)'
                 title='Streamlined Portfolio Analysis'
@@ -56,13 +83,13 @@ const FooterCards = () => {
                 desc='Analyze your holdings at a portfolio level, with data &amp; actionable insights'
               />
               <FooterCard
-                bg='linear-gradient(150deg, #f65599, #4d0316 100%)'
+                bg='linear-gradient(150deg, #17ead9, #6078ea 100%)'
                 title='Customizable Dashboards'
                 img={dashboard}
                 desc='Custom analytics dashboards for your cloud collaboration portfolio &amp; predict future with Trend analysis techniques'
               />
               <FooterCard
-                bg='linear-gradient(150deg, #10dcf6, #0470dc 100%)'
+                bg='linear-gradient(150deg, #17ead9, #6078ea 100%)'
                 title='Innovative Tech'
                 img={tech}
                 desc='Benefit from robust technology investment and potential to drive investment transformation ranging from mobile accessibility to an easy-to-use API'
