@@ -211,6 +211,7 @@ const Contact = () => {
                               className='btn-contact'
                               type='submit'
                               variant='contained'
+                              style={{ borderRadius: '20px' }}
                             >
                               Submit
                             </Button>
