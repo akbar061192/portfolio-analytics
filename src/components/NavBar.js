@@ -42,7 +42,7 @@ const NavBar = () => {
 
   return (
     <AppBar
-      elevation={scrolled ? 3 : 0}
+      elevation={scrolled ? 3 : 1}
       style={{
         position: 'fixed',
         top: 0,
@@ -101,7 +101,10 @@ const NavBar = () => {
             >
               {pages.map(page => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} ` }} textAlign='center'>
+                  <Typography
+                    sx={{ color: `${page === 'Connect Us' ? '#f39305' : '#0b4399'} ` }}
+                    textAlign='center'
+                  >
                     {page}
                   </Typography>
                 </MenuItem>
