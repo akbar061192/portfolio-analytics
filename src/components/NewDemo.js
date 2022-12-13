@@ -128,7 +128,7 @@ const Contact = () => {
                               type='number'
                               required
                               value={formDetails.phone}
-                              placeholder='Mobile No.'
+                              placeholder='Mobile No'
                               onChange={e => onFormUpdate('phone', e.target.value)}
                             />
                           </Col>

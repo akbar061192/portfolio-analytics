@@ -36,10 +36,7 @@ const PortfolioAnalytics = () => {
   useEffect(() => {
     resetTimeout();
     timeoutRef.current = setTimeout(
-      () =>
-        setIndex(prevIndex =>
-          prevIndex === bgImages.length - 1 ? 0 : prevIndex + 1
-        ),
+      () => setIndex(prevIndex => (prevIndex === bgImages.length - 1 ? 0 : prevIndex + 1)),
       delay
     );
 
@@ -59,10 +56,7 @@ const PortfolioAnalytics = () => {
         }}
       >
         <div className='slideshow'>
-          <div
-            className='slideshowSlider'
-            style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-          >
+          <div className='slideshowSlider' style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
             {bgImages.map((bgImage, index) => (
               <img src={bgImage} className='slide' key={index} alt={bgImage} />
             ))}
@@ -105,9 +99,8 @@ const PortfolioAnalytics = () => {
                 textAlign: 'justify',
               }}
             >
-              With FYINNOVEA portfolio management web platform &amp; mobile
-              apps, monitor your investments easily from anywhere and at any
-              time.
+              With FYINNOVEA portfolio management web platform &amp; mobile apps, monitor your investments
+              easily from anywhere and at any time
             </Typography>
           </div>
 
@@ -121,10 +114,9 @@ const PortfolioAnalytics = () => {
                 textAlign: 'justify',
               }}
             >
-              As the market changes, you may need to make changes in your
-              investment goals, allocation, diversification/concentration &amp;
-              timely monitoring your investments using high benchmarks &amp;
-              decision based on data analytics
+              As the market changes, you may need to make changes in your investment goals, allocation,
+              diversification/concentration &amp; timely monitoring your investments using high benchmarks
+              &amp; decision based on data analytics
             </Typography>
           </div>
 
@@ -149,11 +141,10 @@ const PortfolioAnalytics = () => {
                 textAlign: 'justify',
               }}
             >
-              FYINNOVEA Portfolio Analytics platform processes large sets of
-              data, generated via multiple data streams from a wide variety of
-              sources on a constant basis almost every day to identify market
-              trends, forecast risks, analyze sentiments in social media and
-              prevent potential investment fraud resulting in enormous wealth
+              FYINNOVEA Portfolio Analytics platform processes large sets of data, generated via multiple data
+              streams from a wide variety of sources on a constant basis almost every day to identify market
+              trends, forecast risks, analyze sentiments in social media and prevent potential investment
+              fraud resulting in enormous wealth
             </Typography>
           </div>
         </main>
