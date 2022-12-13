@@ -69,8 +69,7 @@ const Contact = () => {
             paddingTop: '1.5rem',
           }}
         >
-          Portfolio Analytics platform for the Tech Savy Advisors &amp; Family
-          Offices
+          Portfolio Analytics platform for the Tech Savy Advisors &amp; Family Offices
         </Typography>
       </section>
       <section className='contact' id='connect'>
@@ -80,9 +79,7 @@ const Contact = () => {
               <TrackVisibility>
                 {({ isVisible }) => (
                   <img
-                    className={
-                      isVisible ? 'animate__animated animate__zoomIn' : ''
-                    }
+                    className={isVisible ? 'animate__animated animate__zoomIn' : ''}
                     src={contactImg}
                     alt='Contact Us'
                     // width={200}
@@ -98,20 +95,13 @@ const Contact = () => {
                     <form onSubmit={handleSubmit}>
                       <Row>
                         <div style={{ display: 'flex' }}>
-                          <Col
-                            size={12}
-                            sm={6}
-                            style={{ marginRight: '1rem' }}
-                            className='px-1'
-                          >
+                          <Col size={12} sm={6} style={{ marginRight: '0.5rem' }} className='px-1'>
                             <input
                               type='text'
                               required
                               value={formDetails.firstName}
                               placeholder='Name*'
-                              onChange={e =>
-                                onFormUpdate('firstName', e.target.value)
-                              }
+                              onChange={e => onFormUpdate('firstName', e.target.value)}
                             />
                           </Col>
                           <Col size={12} sm={6} className='px-1'>
@@ -120,26 +110,17 @@ const Contact = () => {
                               required
                               value={formDetails.lasttName}
                               placeholder='Email*'
-                              onChange={e =>
-                                onFormUpdate('lastName', e.target.value)
-                              }
+                              onChange={e => onFormUpdate('lastName', e.target.value)}
                             />
                           </Col>
                         </div>
                         <div style={{ display: 'flex' }}>
-                          <Col
-                            size={12}
-                            sm={6}
-                            style={{ marginRight: '1rem' }}
-                            className='px-1'
-                          >
+                          <Col size={12} sm={6} style={{ marginRight: '0.5rem' }} className='px-1'>
                             <input
                               type='text'
                               value={formDetails.email}
                               placeholder='Website'
-                              onChange={e =>
-                                onFormUpdate('email', e.target.value)
-                              }
+                              onChange={e => onFormUpdate('email', e.target.value)}
                             />
                           </Col>
                           <Col size={12} sm={6} className='px-1'>
@@ -148,9 +129,7 @@ const Contact = () => {
                               required
                               value={formDetails.phone}
                               placeholder='Mobile No.'
-                              onChange={e =>
-                                onFormUpdate('phone', e.target.value)
-                              }
+                              onChange={e => onFormUpdate('phone', e.target.value)}
                             />
                           </Col>
                         </div>
