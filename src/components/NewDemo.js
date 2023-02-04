@@ -4,32 +4,21 @@ import contactImg from '../assets/contact-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import {
+  Alert,
   Button,
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
   RadioGroup,
+  Snackbar,
   TextField,
   Typography,
 } from '@mui/material';
+import axios from 'axios';
 
 const Contact = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-  };
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
-  };
+  const baseURL = 'http://44.201.160.172:9090/api/services/contact_us';
 
   const [demoInput, setDemoInput] = useState({
     name: '',
@@ -40,8 +29,34 @@ const Contact = () => {
     otherCategory: '',
   });
 
-  const handleSubmit = e => {
+  const [openSnackBar, setOpenSnackBar] = useState(false);
+
+  const [snackBarMessage, setSnackBarMessage] = useState('');
+
+  const handleSubmit = async e => {
+    const input = {
+      fullname: demoInput.name,
+      email: demoInput.email,
+      website: demoInput.website,
+      phone_number: demoInput.mobile,
+      message: demoInput.category === 'other' ? demoInput.otherCategory : demoInput.category,
+    };
     e.preventDefault();
+    try {
+      const response = await axios.post(baseURL, input);
+      setDemoInput({
+        name: '',
+        email: '',
+        website: '',
+        mobile: '',
+        category: '',
+        otherCategory: '',
+      });
+      setOpenSnackBar(true);
+      setSnackBarMessage('Submitted Successfully');
+    } catch (error) {
+      return error;
+    }
   };
 
   const handleInputChange = event => {
@@ -53,6 +68,13 @@ const Contact = () => {
         [name]: value,
       };
     });
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpenSnackBar(false);
   };
 
   return (
@@ -99,18 +121,20 @@ const Contact = () => {
                             <input
                               type='text'
                               required
-                              value={formDetails.firstName}
+                              value={demoInput.name}
                               placeholder='Name*'
-                              onChange={e => onFormUpdate('firstName', e.target.value)}
+                              name='name'
+                              onChange={handleInputChange}
                             />
                           </Col>
                           <Col size={12} sm={6} className='px-1'>
                             <input
                               type='email'
                               required
-                              value={formDetails.lasttName}
+                              name='email'
+                              value={demoInput.email}
                               placeholder='Email*'
-                              onChange={e => onFormUpdate('lastName', e.target.value)}
+                              onChange={handleInputChange}
                             />
                           </Col>
                         </div>
@@ -118,18 +142,20 @@ const Contact = () => {
                           <Col size={12} sm={6} style={{ marginRight: '0.5rem' }} className='px-1'>
                             <input
                               type='text'
-                              value={formDetails.email}
+                              value={demoInput.website}
                               placeholder='Website'
-                              onChange={e => onFormUpdate('email', e.target.value)}
+                              name='website'
+                              onChange={handleInputChange}
                             />
                           </Col>
                           <Col size={12} sm={6} className='px-1'>
                             <input
                               type='number'
                               required
-                              value={formDetails.phone}
+                              value={demoInput.mobile}
                               placeholder='Mobile No*'
-                              onChange={e => onFormUpdate('phone', e.target.value)}
+                              name='mobile'
+                              onChange={handleInputChange}
                             />
                           </Col>
                         </div>
@@ -148,9 +174,8 @@ const Contact = () => {
                             </FormLabel>
                             <RadioGroup
                               name='category'
-
-                              // value={demoInput.category}
-                              // onChange={handleInputChange}
+                              value={demoInput.category}
+                              onChange={handleInputChange}
                             >
                               <FormControlLabel
                                 value='investment_advisor'
@@ -211,6 +236,17 @@ const Contact = () => {
           </Row>
         </Container>
       </section>
+
+      <Snackbar
+        open={openSnackBar}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleClose} severity='success' sx={{ width: '100%' }}>
+          {snackBarMessage}
+        </Alert>
+      </Snackbar>
     </>
   );
 };
