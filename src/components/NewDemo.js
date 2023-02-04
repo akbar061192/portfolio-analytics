@@ -44,6 +44,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const response = await axios.post(baseURL, input);
+      console.log(response);
       setDemoInput({
         name: '',
         email: '',
