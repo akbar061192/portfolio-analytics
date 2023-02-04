@@ -54,8 +54,11 @@ const Contact = () => {
         otherCategory: '',
       });
       setOpenSnackBar(true);
-      setSnackBarMessage('Submitted Successfully');
+      setSnackBarMessage('Request Submitted Successfully. Our team will contact you soon.');
     } catch (error) {
+      console.log(error);
+      setOpenSnackBar(true);
+      setSnackBarMessage('Something went wrong. Please contact our support team.');
       return error;
     }
   };
@@ -244,7 +247,11 @@ const Contact = () => {
         onClose={handleClose}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert onClose={handleClose} severity='success' sx={{ width: '100%' }}>
+        <Alert
+          onClose={handleClose}
+          severity={snackBarMessage.includes('wrong') ? 'error' : 'success'}
+          sx={{ width: '100%' }}
+        >
           {snackBarMessage}
         </Alert>
       </Snackbar>
