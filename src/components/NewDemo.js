@@ -18,7 +18,7 @@ import {
 import axios from 'axios';
 
 const Contact = () => {
-  const baseURL = 'https://44.201.160.172:9090/api/services/contact_us';
+  // const baseURL = 'https://44.201.160.172:9090/api/services/contact_us';
 
   const [demoInput, setDemoInput] = useState({
     name: '',
@@ -43,7 +43,12 @@ const Contact = () => {
     };
     e.preventDefault();
     try {
-      const response = await axios.post(baseURL, input);
+      const response = await axios({
+        method: 'post',
+        baseURL: 'https://44.201.160.172:9090/api/services',
+        url: '/contact_us',
+        data: input,
+      });
       console.log(response);
       setDemoInput({
         name: '',
