@@ -18,7 +18,7 @@ import {
 import axios from 'axios';
 
 const Contact = () => {
-  const baseURL = 'http://44.201.160.172:9090/api/services/contact_us';
+  const baseURL = 'https://44.201.160.172:9090/api/services/contact_us';
 
   const [demoInput, setDemoInput] = useState({
     name: '',
