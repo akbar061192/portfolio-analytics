@@ -45,7 +45,7 @@ const Contact = () => {
     try {
       const response = await axios({
         method: 'post',
-        baseURL: 'https://44.201.160.172:9090/api/services',
+        baseURL: 'https://15.206.170.90:9090/api/services',
         url: '/contact_us',
         data: input,
       });
