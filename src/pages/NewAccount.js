@@ -92,6 +92,14 @@ export default function NewAccount() {
         console.log(response);
         setOpenSnackBar(true);
         setSnackBarMessage('Account has been created successfully.');
+        setNewAccount({
+          fName: '',
+          lName: '',
+          email: '',
+          mobile: '',
+          password: '',
+          confirmPassword: '',
+        });
       } catch (error) {
         console.log(error);
         setOpenSnackBar(true);
